@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <title>Conferma quadro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body>
+	<div>
+    	<p th:text="'Titolo: ' + ${quadro.titolo}" />
+    </div>
+	<div>
+    	<p th:text="'Anno: ' + ${quadro.anno}" />
+    </div>
+	<div>
+    	<p th:text="'Tecnica: ' + ${quadro.tecnica}" />	
+    </div>
+	<div>
+    	<p th:text="'Dimensioni: ' + ${quadro.dimensioni}" />	
+      </div>
+   	<div>
+    	<p th:text="'Autore: ' + ${autore.nome} + ' ' + ${autore.cognome}" />	
+    </div>
+    <form>
+		<button formaction = "/" type = "submit" formmethod = "GET">Torna alla home!</button>
+	</form>
+</body>
+</html>

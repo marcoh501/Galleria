@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>New Quadro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/cancella}" th:object="${quadro}"
+		method="post">
+		<div>
+		<div>
+				<span th:text="#{label.titolo}"> Titolo: </span> <span><input
+					type="text" th:field="*{titolo}" /></span> 
+					<span th:if="${#fields.hasErrors('titolo')}" th:text="#{label.mandatory}">Error</span>
+			</div>
+			</div>
+			<div>
+			
+				<span><button type="submit">Elimina</button></span>
+			</div>
+		
+	</form>
+	<form>
+		<button formaction = "/" type = "submit" formmethod = "GET">Torna alla home!</button>
+	</form>
+</body>
+</html>
